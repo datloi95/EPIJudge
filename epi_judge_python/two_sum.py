@@ -4,8 +4,13 @@ from test_framework import generic_test
 
 
 def has_two_sum(A: List[int], t: int) -> bool:
-    # TODO - you fill in here.
-    return True
+    hash_set = set()
+    for num in A:
+        hash_set.add(num)
+    for num in A:
+        if (t-num) in hash_set:
+            return True
+    return False
 
 
 if __name__ == '__main__':
